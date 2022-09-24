@@ -1,13 +1,13 @@
-package Classes;
+package classes;
 
 public abstract class Character {
     private int id;
     private String name;
     private int hp;
     private boolean isAlive;
-    private int counter = 0;
+    private static int counter = 0;
 
-    public Character(String name, int hp, boolean isAlive) {
+    public Character(String name, int hp) {
         setName(name);
         setHp(hp);
         this.isAlive = true;
@@ -37,6 +37,10 @@ public abstract class Character {
 
     public boolean isAlive() {
         return isAlive;
+    }
+
+    public void setIsAlive(boolean isAlive) {
+        this.isAlive = isAlive;
     }
 
 }
